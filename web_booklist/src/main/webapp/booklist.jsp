@@ -20,6 +20,10 @@
 		<tr>
 			<td width="150" height="20" bgcolor="#D2E9F9">
 				<p align="center">
+				<span style="font-size:8pt;"><b>NO</b></span></p>
+			</td>
+			<td width="150" height="20" bgcolor="#D2E9F9">
+				<p align="center">
 				<span style="font-size:8pt;"><b>BOOKNAME</b></span></p>
 			</td>
 			<td width="150" height="20" bgcolor="#D2E9F9">
@@ -33,7 +37,9 @@
 		</tr>
 	<%
 	if(myResultSet!=null){
+		int num=0;
 		while(myResultSet.next()){
+			num++;
 			String W_BOOKID=myResultSet.getString("bookid");
 			String W_BOOKNAME=myResultSet.getString("bookname");
 			String W_PUBLISHER=myResultSet.getString("publisher");
@@ -41,19 +47,23 @@
 	%>
 		<tr>
 			<td width="150" height="20">
+				<p align="center"><span style="font-szie:9px;">
+				<font face="돋움체"><%=num %></font></span></p>
+			</td>
+			<td width="150" height="20">
 				<p><span style="font-size:9pt;">
 				<a href="bookview.jsp?bookid=<%=W_BOOKID %>">
-				<font color="black">
+				<font face="돋움체" color="black">
 				<%=W_BOOKNAME %></font></a></span></p>
 			</td>
 			<td width="150" height="20">
 				<p align="center"><span style="font-size:9px;">
-				<font ><%=W_PUBLISHER %></font></span></p>
+				<font face="돋움체"><%=W_PUBLISHER %></font></span></p>
 			</td>
 			
 			<td width="50" height="20">
 				<p align="center"><span style="font-size:9pt;">
-				<font ><%=W_PRICE %></font></span></p>			
+				<font face="돋움체"><%=W_PRICE %></font></span></p>			
 			</td>
 		</tr>
 	<%

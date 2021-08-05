@@ -7,6 +7,10 @@
 	Connection dbconn = DriverManager.getConnection(url, "madang", "madang");
 	Statement stmt = dbconn.createStatement();
 	String bookid=request.getParameter("bookid");
+	
+	if(bookid==null||bookid.length()==0){
+		response.sendRedirect("booklist.jsp");
+	}else{
 	ResultSet myResultSet = stmt.executeQuery("SELECT * FROM BOOK WHERE bookid='"+bookid+"'");
 	if(myResultSet!=null){
 		myResultSet.next();
@@ -60,7 +64,7 @@
 			</td>
 		</tr>	
 	</table>
-<%
+<%		}
 	}
 	stmt.close();
 	dbconn.close();
