@@ -39,11 +39,11 @@
 	if(myResultSet!=null){
 		int num=0;
 		while(myResultSet.next()){
-			num++;
 			String W_BOOKID=myResultSet.getString("bookid");
 			String W_BOOKNAME=myResultSet.getString("bookname");
 			String W_PUBLISHER=myResultSet.getString("publisher");
 			String W_PRICE=myResultSet.getString("price");
+			num++;
 	%>
 		<tr>
 			<td width="150" height="20">

@@ -1,13 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
- <%@ page import="java.sql.*" %>
+<%@ page import="java.sql.*" %>
 <%
 	Class.forName("oracle.jdbc.driver.OracleDriver");
 	String url = "jdbc:oracle:thin:@localhost:1521:xe";
 	Connection dbconn = DriverManager.getConnection(url, "madang", "madang");
 	Statement stmt = dbconn.createStatement();
 	String bookid=request.getParameter("bookid");
-	
+	//request.getParameter("bookid").trim();
 	if(bookid==null||bookid.length()==0){
 		response.sendRedirect("booklist.jsp");
 	}else{
