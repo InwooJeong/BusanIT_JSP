@@ -6,7 +6,7 @@
 <body>
 	<h3>param action tag</h3>
 	<jsp:include page="param02_data.jsp">
-		<jsp:param value="<%= java.net.URLEncoder.encode("today's date n time","UTF-8") %>" 
+		<jsp:param value='<%= java.net.URLEncoder.encode("today's date n time","UTF-8") %>' 
 		 name="title" />
 		<jsp:param name="date" value="<%=java.util.Calendar.getInstance().getTime() %>"/> 
 	</jsp:include>	

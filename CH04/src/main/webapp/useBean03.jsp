@@ -7,10 +7,8 @@
 <title>Action Tag</title>
 </head>
 <body>
-	<jsp:useBean id="bean" class="com.dao.Calculator"/>
-	<%
-		int m = bean.process(5);
-		out.print("three squares of 5");
-	%>
+	<jsp:useBean id="person" class="com.dao.Person" scope="request"/>
+	<p>ID : <%=person.getId() %>
+	<p>NAME : <%=person.getName() %>
 </body>
 </html>
