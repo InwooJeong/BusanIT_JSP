@@ -7,9 +7,10 @@
 <title>Implicit Objects</title>
 </head>
 <body>
-	<%
-		out.println("Today's date n time : " + "<br>");
-		out.println(java.util.Calendar.getInstance().getTime());
-	%>
+	<form action="out02_process.jsp" method="post">
+		<p> ID : <input type="text" name="id"></p>
+		<p> PW : <input type="password" name="pw"></p>
+		<p><input type="submit" value="send"></p>
+	</form>
 </body>
 </html>

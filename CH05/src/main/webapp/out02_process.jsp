@@ -8,8 +8,11 @@
 </head>
 <body>
 	<%
-		out.println("Today's date n time : " + "<br>");
-		out.println(java.util.Calendar.getInstance().getTime());
+		request.setCharacterEncoding("utf-8");
+		String userid = request.getParameter("id");
+		String pw = request.getParameter("pw");
 	%>
+	<p> ID : <% out.println(userid); %></p>
+	<p> PW : <% out.println(pw); %></p>
 </body>
 </html>
