@@ -9,7 +9,7 @@ public class Product implements Serializable{
 	private String productId;
 	private String pname;
 	private Integer unitPrice;
-	private String desciption;
+	private String description;
 	private String manufacturer;
 	private String category;
 	private long unitsInStock;
@@ -49,12 +49,12 @@ public class Product implements Serializable{
 		this.unitPrice = unitPrice;
 	}
 
-	public String getDesciption() {
-		return desciption;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDesciption(String desciption) {
-		this.desciption = desciption;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getManufacturer() {
@@ -96,7 +96,7 @@ public class Product implements Serializable{
 	@Override
 	public String toString() {
 		return "Product [productId=" + productId + ", pname=" + pname + ", unitPrice=" + unitPrice + ", desciption="
-				+ desciption + ", manufacturer=" + manufacturer + ", category=" + category + ", unitsInStock="
+				+ description + ", manufacturer=" + manufacturer + ", category=" + category + ", unitsInStock="
 				+ unitsInStock + ", condition=" + condition + "]";
 	}
 	

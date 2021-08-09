@@ -1,3 +1,4 @@
+<%@page import="dao.ProductRepository"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import = "dto.Product" %>
@@ -19,13 +20,14 @@
 	</div>
 	<%
 		String id=request.getParameter("id");
-		Product product = productDAO.getProductById(id);
+		ProductRepository dao = ProductRepository.getInstance();
+		Product product = dao.getProductById(id);
 	%>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
 				<h3><%=product.getPname() %></h3>
-				<p><%=product.getDesciption() %></p>
+				<p><%=product.getDescription() %></p>
 				<p><b>Product Code : </b><span class="badge badge-danger">
 					<%=product.getProductId() %></span></p>
 				<p><b>Company : </b><%=product.getManufacturer() %></p>
