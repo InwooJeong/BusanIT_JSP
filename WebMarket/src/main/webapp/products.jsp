@@ -29,6 +29,9 @@
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getDesciption() %></p>
 				<p><%=product.getUnitPrice() %></p>
+				
+				<p><a href="./product.jsp?id=<%=product.getProductId() %>"
+				class="btn btn-secondary" role="button">See Details &raquo;</a>
 			</div>
 			<%
 				}
