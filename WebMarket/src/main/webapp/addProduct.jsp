@@ -4,7 +4,7 @@
 <html>
 <head>
 <link rel = "stylesheet"
-	href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	href = "./resources/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <title>Add Product</title>
 </head>
@@ -17,7 +17,7 @@
 	</div>
 	<div class="container">
 		<form name="newProduct" action="./processAddProduct.jsp" class="form-horizontal"
-			  method="post">
+			  method="post" enctype="multipart/form-data">
 			<div class="form-group row">
 				<label class="col-sm-2">Product Code</label>
 				<div class="col-sm-3">
@@ -67,6 +67,12 @@
 					<input type="radio" name="condition" value="New">New
 					<input type="radio" name="condition" value="Old">Used
 					<input type="radio" name="condition" value="Refurbished">Refurbished
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-2">Image</label>
+				<div class="col-sm-5">
+					<input type="file" name="productImage" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">

@@ -7,7 +7,7 @@
 <html>
 <head>
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	href="./resources/css/bootstrap.min.css">
 <title>Product List</title>
 </head>
 <body>
@@ -28,6 +28,8 @@
 					Product product = listOfProducts.get(i);
 			%>
 			<div class="col-md-4">
+				<img src="/local_img/<%=product.getFilename() %>"
+				style="width:100%; height:250">
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getDescription() %></p>
 				<p><%=product.getUnitPrice() %></p>

@@ -7,7 +7,7 @@
 <html>
 <head>
 <link rel = "stylesheet"
-	href = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	href = "./resources/css/bootstrap.min.css">
 <meta charset="UTF-8">
 <title>Product Detail</title>
 </head>
@@ -25,6 +25,10 @@
 	%>
 	<div class="container">
 		<div class="row">
+			<div clacc="col-mid-5">
+				<img src="/local_img/<%=product.getFilename() %>"
+				style="width:100%; height:100%">
+			</div>
 			<div class="col-md-6">
 				<h3><%=product.getPname() %></h3>
 				<p><%=product.getDescription() %></p>
