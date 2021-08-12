@@ -21,19 +21,19 @@
 			<div class="form-group row">
 				<label class="col-sm-2">Product Code</label>
 				<div class="col-sm-3">
-					<input type="text" name="productId" class="form-control">
+					<input type="text" name="productId" id="productId" class="form-control">
 				</div>
 			</div>	  
 			<div class="form-group row">
 				<label class="col-sm-2">Product Name</label>
 				<div class="col-sm-3">
-					<input type="text" name="name" class="form-control">
+					<input type="text" name="name" id="name" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
 				<label class="col-sm-2">Price</label>
 				<div class="col-sm-3">
-					<input type="text" name="unitPrice" class="form-control">
+					<input type="text" name="unitPrice" id="unitPrice" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -58,7 +58,7 @@
 			<div class="form-group row">
 				<label class="col-sm-2">Stocks</label>
 				<div class="col-sm-3">
-					<input type="text" name="unitsInStock" class="form-control">
+					<input type="text" name="unitsInStock" id="unitsInStock" class="form-control">
 				</div>
 			</div>
 			<div class="form-group row">
@@ -77,10 +77,15 @@
 			</div>
 			<div class="form-group row">
 				<div class="col-sm-offset-2 col-sm-10">
-					<input type="submit" class="btn btn-primary" value="add">
+					<input type="button" class="btn btn-primary" value="add"
+					onclick="CheckAddProduct()">
 				</div>
 			</div>
 		</form>
 	</div>
+	<footer>
+		<script type="text/javascript" src="./resources/js/validation.js">
+		</script>
+	</footer>
 </body>
 </html>
