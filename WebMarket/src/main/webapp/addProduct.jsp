@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,13 +10,18 @@
 <title>Add Product</title>
 </head>
 <body>
+	<fmt:setLocale value='<%=request.getParameter("language") %>'/>
+	<fmt:bundle basename="bundle.message">
 	<jsp:include page="menu.jsp"/>
 	<div class="jumbotron">
 		<div class="container">
-			<h1 class="display-3">Add Product</h1>
+			<h1 class="display-3"><fmt:message key="title"/></h1>
 		</div>
 	</div>
 	<div class="container">
+		<div class="text-right">
+			<a href="?language=ko">Korean</a>|<a href="?language=en">English</a>
+		</div>
 		<form name="newProduct" action="./processAddProduct.jsp" class="form-horizontal"
 			  method="post" enctype="multipart/form-data">
 			<div class="form-group row">
@@ -87,5 +93,6 @@
 		<script type="text/javascript" src="./resources/js/validation.js">
 		</script>
 	</footer>
+	</fmt:bundle>
 </body>
 </html>
