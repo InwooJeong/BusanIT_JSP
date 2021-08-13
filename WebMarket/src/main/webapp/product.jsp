@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import = "dto.Product" %>
+<%@page errorPage="exeptionNoProductId.jsp" %>
 <!DOCTYPE html>
 <jsp:useBean id="productDAO" class="dao.ProductRepository" scope="session" />
 <html>
